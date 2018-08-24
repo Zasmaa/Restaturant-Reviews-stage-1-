@@ -78,7 +78,7 @@ initMap = () => {
         scrollWheelZoom: false
       });
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
-    mapboxToken: '',
+    mapboxToken: 'sk.eyJ1IjoiemFzbWFhIiwiYSI6ImNqa3l3bGdrMzBud3czcGxiM2I0b21rYXMifQ.uJroXLLbGyrPtf-zxaEQZw',
     maxZoom: 18,
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
       '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
@@ -171,8 +171,9 @@ createRestaurantHTML = (restaurant) => {
   neighborhood.innerHTML = restaurant.neighborhood;
   li.append(neighborhood);
 
+/* https://discussions.udacity.com/t/p5-how-to-make-restaurant-attribute-strings-wrap-or-line-break-using-javascript/861307 */
   const address = document.createElement('p');
-  address.innerHTML = restaurant.address;
+  address.innerHTML = restaurant.address.replace(',','<br/>');
   li.append(address);
 
   const more = document.createElement('a');
