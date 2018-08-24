@@ -19,10 +19,15 @@
     <nav>
       <h1><a href="/">Restaurant Reviews</a></h1>
     </nav>
-    <!-- Beginning breadcrumb -->
-    <ul id="breadcrumb" >
-      <li><a href="/">Home</a></li>
-    </ul>
+     <!-- Beginning breadcrumb -->
+    <!--  source from https://stackoverflow.com/questions/25326699/proper-aria-handling-of-breadcrumb-navigation-->
+    <nav aria-label ="breadcrumb">
+    <ol id="breadcrumb" >
+      <li>
+        <a href="/">Home</a>
+      </li>
+    </ol>
+    </nav>
     <!-- End breadcrumb -->
     <!-- End nav -->
   </header>
