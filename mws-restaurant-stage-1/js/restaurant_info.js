@@ -113,11 +113,9 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
     day.innerHTML = key;
     row.appendChild(day);
 
-/**
- * source from https://discussions.udacity.com/t/p5-how-to-make-restaurant-attribute-strings-wrap-or-line-break-using-javascript/861307
- */
+
     const time = document.createElement('td');
-    time.innerHTML = operatingHours[key].replace('/, */g,' ', <br/>');
+    time.innerHTML = operatingHours[key];
     row.appendChild(time);
 
     hours.appendChild(row);
