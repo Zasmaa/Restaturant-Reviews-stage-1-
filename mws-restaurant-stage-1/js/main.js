@@ -170,10 +170,8 @@ createRestaurantHTML = (restaurant) => {
   const neighborhood = document.createElement('p');
   neighborhood.innerHTML = restaurant.neighborhood;
   li.append(neighborhood);
-
-/* https://discussions.udacity.com/t/p5-how-to-make-restaurant-attribute-strings-wrap-or-line-break-using-javascript/861307 */
   const address = document.createElement('p');
-  address.innerHTML = restaurant.address.replace(',','<br/>');
+  address.innerHTML = restaurant.address;
   li.append(address);
 
   const more = document.createElement('a');
