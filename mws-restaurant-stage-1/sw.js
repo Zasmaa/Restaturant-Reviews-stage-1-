@@ -8,7 +8,7 @@ let staticCacheName = 'restaurants-cache-v1';
 self.addEventListener('install', function(event) {
 	console.log('');
 	event.waitUntil(
-caches.open(restaurant-cache-v1)
+caches.open(restaurants-cache-v1)
 		.then(function (cache) {
 			return cache.addAll([
 				'/',
